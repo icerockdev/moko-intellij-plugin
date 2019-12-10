@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>com.icerockdev.moko-intellij-plugin</id>
+    <name>Moko</name>
+    <vendor email="support@icerockdev.com" url="https://www.icerockdev.com">IceRock Development</vendor>
+
+    <description><![CDATA[
+    long words long words long words long words long words long words
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <moduleType id="moko_feature_module" implementationClass="intellij.MokoFeatureModule"/>
+    </extensions>
+
+</idea-plugin>
