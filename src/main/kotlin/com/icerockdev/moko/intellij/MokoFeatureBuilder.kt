@@ -1,4 +1,4 @@
-package intellij
+package com.icerockdev.moko.intellij
 
 import com.intellij.ide.model
 import com.intellij.ide.util.projectWizard.*
@@ -25,19 +25,8 @@ class MokoFeatureBuilder: ModuleBuilder() {
         val module = modifiableRootModel.module
         modifiableRootModel.addContentEntry(root)
 
-
-        println(project.name)
-        println(project.basePath)
-        println(project.projectFilePath)
-
         val featureName = module.name
-
-        println(module.name)
-        println(root.path)
-
-
         val packageName = featureName.decapitalize()
-
         val className = featureName.split(".").last().capitalize()
 
         //classes
@@ -48,13 +37,6 @@ class MokoFeatureBuilder: ModuleBuilder() {
         //folders
         val srcDir = "src"
         val commonDir = srcDir + "/commonMain/kotlin/" + packageName.replace(".","/")
-
-        //root.createDirectories(srcDir + "/androidMain")
-        //root.createDirectories(commonDir)
-        //root.createDirectories(commonDir + "/di")
-        //root.createDirectories(commonDir + "/model")
-        //root.createDirectories(commonDir + "/presentation")
-
 
         //imports
         val diImport = packageName + ".di." + diClassName
@@ -96,6 +78,7 @@ class MokoFeatureBuilder: ModuleBuilder() {
                 "}"
         root.createFile(commonDir+"/di/$diClassName.kt", diContent)
 
+        //Create model file
         val modelContent =
             "package $packageName.model\n" +
                     "\n" +
@@ -104,6 +87,7 @@ class MokoFeatureBuilder: ModuleBuilder() {
                     "}"
         root.createFile(commonDir+"/model/$modelClassName.kt", modelContent)
 
+        //Create viewModel file
         val viewModelContent =
             "package $packageName.presentation\n" +
                     "\n" +

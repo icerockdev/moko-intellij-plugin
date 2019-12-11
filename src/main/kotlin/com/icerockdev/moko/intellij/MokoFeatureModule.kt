@@ -1,4 +1,4 @@
-package intellij
+package com.icerockdev.moko.intellij
 
 import com.intellij.icons.AllIcons
 import com.intellij.ide.util.projectWizard.ModuleWizardStep
