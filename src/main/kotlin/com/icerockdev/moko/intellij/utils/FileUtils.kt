@@ -1,3 +1,6 @@
+/*
+ * Copyright 2018 JetBrains s.r.o.
+ */
 
 package com.icerockdev.moko.intellij.utils
 
