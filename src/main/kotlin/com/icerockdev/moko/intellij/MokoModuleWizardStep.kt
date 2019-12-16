@@ -15,17 +15,11 @@ class MokoModuleWizardStep(private val config: MokoFeatureConfig): ModuleWizardS
 
     lateinit var packageNameInput: JTextField
 
-    val panel by lazy {
-        JPanel().apply {
-            packageNameInput = JTextField(config.projectPrefix)
-            add(JLabel("Project package name (feature prefix)"))
-            add(packageNameInput)
-        }
-    }
-
     override fun getComponent(): JComponent {
         //todo: package name input, feature type selection, dependencies checkbox
-        return panel
+        val form = MokoModuleForm().apply { updateConfig(config) }
+        packageNameInput = form.packageNameInput
+        return form.rootPanel
     }
 
 }
