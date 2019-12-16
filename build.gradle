@@ -33,3 +33,7 @@ patchPluginXml {
 Test update.
 """
 }
+
+publishPlugin {
+    token = System.getProperty("JETBRAINS_TOKEN")
+}
