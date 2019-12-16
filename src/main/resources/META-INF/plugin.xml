@@ -1,11 +1,12 @@
 <idea-plugin>
-    <id>com.icerockdev.moko-intellij-plugin</id>
-    <name>Moko</name>
+    <id>dev.icerock.moko.intellij-plugin</id>
+    <name>MOKO</name>
     <vendor email="support@icerockdev.com" url="https://www.icerockdev.com">IceRock Development</vendor>
     <version>1.0.0</version>
 
     <description><![CDATA[
-    long words long words long words long words long words long words
+    Plugin is addition to <a href="https://moko.icerock.dev/">MOKO libraries</a> and <a href="https://github.com/icerockdev/moko-template">moko-template</a>.<br>
+    Plugin allow add feature-modules with moko libraries and predefined structure.
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
