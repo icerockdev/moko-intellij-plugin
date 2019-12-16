@@ -21,17 +21,19 @@ class MokoFeatureBuilder: ModuleBuilder() {
     }
 
     override fun getCustomOptionsStep(context: WizardContext?, parentDisposable: Disposable?): ModuleWizardStep? {
-        return MokoModuleWizardStep()
+        return MokoModuleWizardStep(config)
     }
 
     override fun setupRootModel(modifiableRootModel: ModifiableRootModel) {
         var root = createAndGetRoot() ?: return
-        val project = modifiableRootModel.project
+
+        val projectPrefix = config.projectPrefix
+
         val module = modifiableRootModel.module
         modifiableRootModel.addContentEntry(root)
 
         val featureName = module.name
-        val packageName = featureName.decapitalize()
+        val packageName = projectPrefix + ".feature." + featureName.decapitalize()
         val className = featureName.split(".").last().capitalize()
 
         //classes
