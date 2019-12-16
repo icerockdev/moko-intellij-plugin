@@ -2,6 +2,7 @@
     <id>com.icerockdev.moko-intellij-plugin</id>
     <name>Moko</name>
     <vendor email="support@icerockdev.com" url="https://www.icerockdev.com">IceRock Development</vendor>
+    <version>1.0.0</version>
 
     <description><![CDATA[
     long words long words long words long words long words long words
