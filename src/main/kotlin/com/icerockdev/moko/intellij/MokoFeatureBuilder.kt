@@ -138,7 +138,7 @@ class MokoFeatureBuilder: ModuleBuilder() {
 
     private fun androidManifestContent(packageName: String): String {
         return "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<manifest package=\"${packageName}}\" />"
+                "<manifest package=\"${packageName}\" />"
     }
 
     private fun gradleContent(): String {
