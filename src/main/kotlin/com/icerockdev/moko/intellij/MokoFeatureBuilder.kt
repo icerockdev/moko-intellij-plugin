@@ -14,6 +14,8 @@ import com.intellij.openapi.vfs.*
 import java.io.*
 
 class MokoFeatureBuilder: ModuleBuilder() {
+    private var config = MokoFeatureConfig()
+
     override fun getModuleType(): ModuleType<MokoFeatureBuilder> {
         return MokoFeatureModule()
     }
