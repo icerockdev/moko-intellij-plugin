@@ -46,9 +46,9 @@ class MokoFeatureBuilder: ModuleBuilder() {
         val commonDir = srcDir + "/commonMain/kotlin/" + packageName.replace(".","/")
 
         //imports
-        val diImport = packageName + ".di." + diClassName
-        val modelImport = packageName + ".model." + modelClassName
-        val viewModelImport = packageName + ".presentation." + viewModelClassName
+        val diImport = "$packageName.di.$diClassName"
+        val modelImport = "$packageName.model.$modelClassName"
+        val viewModelImport = "$packageName.presentation.$viewModelClassName"
 
 
         //TODO: Apply checkbox for mvvm, media, permission, widgets, units, fields
@@ -57,7 +57,7 @@ class MokoFeatureBuilder: ModuleBuilder() {
         root.createFile("build.gradle.kts", gradleContent())
 
         // Create AndroidManifest
-        root.createFile(srcDir + "/androidMain/AndroidManifest.xml", androidManifestContent(packageName))
+        root.createFile("$srcDir/androidMain/AndroidManifest.xml", androidManifestContent(packageName))
 
         // Create DI file
         val diContent =
@@ -83,7 +83,7 @@ class MokoFeatureBuilder: ModuleBuilder() {
                 "            strings = strings" +
                 "        )\n" +
                 "}"
-        root.createFile(commonDir+"/di/$diClassName.kt", diContent)
+        root.createFile("$commonDir/di/$diClassName.kt", diContent)
 
         //Create model file
         val modelContent =
@@ -92,7 +92,7 @@ class MokoFeatureBuilder: ModuleBuilder() {
                     "interface $modelClassName {\n" +
                     "    //TODO: Append your data calls\n" +
                     "}"
-        root.createFile(commonDir+"/model/$modelClassName.kt", modelContent)
+        root.createFile("$commonDir/model/$modelClassName.kt", modelContent)
 
         //Create viewModel file
         val viewModelContent =
@@ -128,7 +128,7 @@ class MokoFeatureBuilder: ModuleBuilder() {
                     "        //fun showMessage(stringDesc: StringDesc)\n" +
                     "    }\n" +
                     "}"
-        root.createFile(commonDir+"/presentation/$viewModelClassName.kt", viewModelContent)
+        root.createFile("$commonDir/presentation/$viewModelClassName.kt", viewModelContent)
     }
 
     private fun createAndGetRoot(): VirtualFile? {
