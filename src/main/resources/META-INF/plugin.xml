@@ -2,7 +2,7 @@
     <id>dev.icerock.moko.intellij-plugin</id>
     <name>MOKO</name>
     <vendor email="support@icerockdev.com" url="https://www.icerockdev.com">IceRock Development</vendor>
-    <version>1.0.0</version>
+    <version>0.1.0</version>
 
     <description><![CDATA[
     Plugin is addition to <a href="https://moko.icerock.dev/">MOKO libraries</a> and <a href="https://github.com/icerockdev/moko-template">moko-template</a>.<br>
