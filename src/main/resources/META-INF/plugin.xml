@@ -1,11 +1,17 @@
 <idea-plugin>
     <id>com.icerockdev.moko-intellij-plugin</id>
     <name>Moko</name>
+    <version>0.1.0</version>
     <vendor email="support@icerockdev.com" url="https://www.icerockdev.com">IceRock Development</vendor>
 
     <description><![CDATA[
-    long words long words long words long words long words long words
-    ]]></description>
+	Supports the project structure of <a href="https://github.com/icerockdev/moko-template">Moko Template</a>,
+	 providing a module wizard.
+	        The following features are available:
+            <ul>
+                <li>Ability to create sample feature modules with linked <a href="https://moko.icerock.dev">Moko libraries</a>.</li>
+            </ul>
+	]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
@@ -15,5 +21,12 @@
         <!-- Add your extensions here -->
         <moduleType id="moko_feature_module" implementationClass="com.icerockdev.moko.intellij.MokoFeatureModule"/>
     </extensions>
+    <change-notes><!-- language: HTML --><![CDATA[
+		<h3>0.1.0</h3>
+		<ul>
+			<li>Allow to enter project package prefix on module setup</li>
+		</ul>
+		]]>
+    </change-notes>
 
 </idea-plugin>
