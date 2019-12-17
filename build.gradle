@@ -4,7 +4,8 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.60'
 }
 
-group 'com.icerockdev'
+group 'dev.icerock.moko'
+
 version '0.1.0'
 
 sourceCompatibility = 1.8
@@ -15,12 +16,12 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2019.3'
+    version 'IC-2019.3'
+    plugins = ['java']
 }
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
@@ -30,6 +31,10 @@ compileTestKotlin {
 }
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+Test update.
+"""
+}
+
+publishPlugin {
+    token = System.getProperty("JETBRAINS_TOKEN")
 }

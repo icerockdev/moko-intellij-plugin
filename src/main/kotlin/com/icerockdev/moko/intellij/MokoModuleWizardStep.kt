@@ -5,16 +5,21 @@
 package com.icerockdev.moko.intellij
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep
-import javax.swing.JComponent
-import javax.swing.JLabel
+import javax.swing.*
 
-class MokoModuleWizardStep(): ModuleWizardStep() {
+class MokoModuleWizardStep(private val config: MokoFeatureConfig): ModuleWizardStep() {
     override fun updateDataModel() {
+        config.projectPrefix = packageNameInput.text
+        config.syncProperties()
     }
+
+    lateinit var packageNameInput: JTextField
 
     override fun getComponent(): JComponent {
         //todo: package name input, feature type selection, dependencies checkbox
-        return JLabel("Test")
+        val form = MokoModuleForm().apply { updateConfig(config) }
+        packageNameInput = form.packageNameInput
+        return form.rootPanel
     }
 
 }
