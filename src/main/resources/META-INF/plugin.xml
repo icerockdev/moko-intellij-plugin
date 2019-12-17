@@ -1,6 +1,7 @@
 <idea-plugin>
     <id>dev.icerock.moko.intellij-plugin</id>
     <name>MOKO</name>
+
     <vendor email="support@icerockdev.com" url="https://www.icerockdev.com">IceRock Development</vendor>
     <version>0.1.0</version>
 
@@ -18,5 +19,12 @@
         <!-- Add your extensions here -->
         <moduleType id="moko_feature_module" implementationClass="com.icerockdev.moko.intellij.MokoFeatureModule"/>
     </extensions>
+    <change-notes><!-- language: HTML --><![CDATA[
+		<h3>0.1.0</h3>
+		<ul>
+			<li>Allow to enter project package prefix on module setup</li>
+		</ul>
+		]]>
+    </change-notes>
 
 </idea-plugin>
