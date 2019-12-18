@@ -3,14 +3,14 @@
     <name>MOKO</name>
 
     <vendor email="support@icerockdev.com" url="https://www.icerockdev.com">IceRock Development</vendor>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 
     <description><![CDATA[
     Plugin is addition to <a href="https://moko.icerock.dev/">MOKO libraries</a> and <a href="https://github.com/icerockdev/moko-template">moko-template</a>.<br>
     Plugin allow add feature-modules with moko libraries and predefined structure.
     ]]></description>
 
-    <idea-version since-build="173.0" />
+    <idea-version since-build="191" />
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
@@ -24,6 +24,10 @@
 		<h3>0.1.0</h3>
 		<ul>
 			<li>Allow to enter project package prefix on module setup</li>
+		</ul>
+		<h3>0.1.1</h3>
+		<ul>
+			<li>Support IDEA 2019.1 / Android Studio 3.5.3</li>
 		</ul>
 		]]>
     </change-notes>
