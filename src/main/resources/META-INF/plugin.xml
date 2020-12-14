@@ -3,23 +3,23 @@
     <name>MOKO</name>
 
     <vendor email="support@icerockdev.com" url="https://www.icerockdev.com">IceRock Development</vendor>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
 
     <description><![CDATA[
     Plugin is addition to <a href="https://moko.icerock.dev/">MOKO libraries</a> and <a href="https://github.com/icerockdev/moko-template">moko-template</a>.<br>
     Plugin allow add feature-modules with moko libraries and predefined structure.
     ]]></description>
 
-    <idea-version since-build="191" />
+    <idea-version since-build="201" />
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
-    <depends>com.intellij.modules.java</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
-        <moduleType id="moko_feature_module" implementationClass="com.icerockdev.moko.intellij.MokoFeatureModule"/>
-    </extensions>
+    <depends optional="true" config-file="idea-contribs.xml">com.intellij.modules.java</depends>
+
+    <depends>org.jetbrains.android</depends>
+    <depends optional="true" config-file="studio-contribs.xml">com.intellij.modules.androidstudio</depends>
+
     <change-notes><!-- language: HTML --><![CDATA[
 		<h3>0.1.0</h3>
 		<ul>

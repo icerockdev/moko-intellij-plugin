@@ -1,0 +1,7 @@
+<!-- Defines IDEA IDE-specific contributions and implementations. -->
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij">
+<!--    <editorNotificationProvider implementation="io.flutter.inspections.IncompatibleDartPluginNotificationProvider"/>-->
+    <moduleType id="moko_feature_module" implementationClass="com.icerockdev.moko.intellij.MokoFeatureModule"/>
+  </extensions>
+</idea-plugin>
